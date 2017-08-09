@@ -18,6 +18,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>欢迎界面：使用request对象</title>
+<script src="jquery-3.2.1.min.js"></script>
+<script>
+$(document).ready(function() {
+	alert("你好，家伟！");
+});
+</script>
 </head>
 <body>
   欢迎你，<%= user %> <br/><br/>

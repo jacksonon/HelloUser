@@ -9,19 +9,15 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
   <servlet>
     <servlet-name>HelloServlet</servlet-name>
     <servlet-class>wangjiawei.HelloServlet</servlet-class>
     <load-on-startup>1</load-on-startup>
   </servlet>
-  
   <servlet-mapping>
     <servlet-name>HelloServlet</servlet-name>
     <url-pattern>/helloUser</url-pattern>
   </servlet-mapping>
-  
-  
   <filter>
     <filter-name>myFilter</filter-name>
     <filter-class>wangjiawei.IPFilter</filter-class>
@@ -30,12 +26,13 @@
       <param-value>192.168.1.100</param-value>
     </init-param>
   </filter>
-  
   <filter-mapping>
     <filter-name>myFilter</filter-name>
     <url-pattern>/helloUser</url-pattern>
     <url-pattern>/welcome/*</url-pattern>
     <servlet-name>HelloServlet</servlet-name>
   </filter-mapping>
-  
+  <listener>
+    <listener-class>wangjiawei.OnlineListener</listener-class>
+  </listener>
 </web-app>
