@@ -9,6 +9,7 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
   <servlet>
     <servlet-name>HelloServlet</servlet-name>
     <servlet-class>wangjiawei.HelloServlet</servlet-class>
@@ -18,6 +19,7 @@
     <servlet-name>HelloServlet</servlet-name>
     <url-pattern>/helloUser</url-pattern>
   </servlet-mapping>
+  
   <filter>
     <filter-name>myFilter</filter-name>
     <filter-class>wangjiawei.IPFilter</filter-class>
@@ -32,7 +34,18 @@
     <url-pattern>/welcome/*</url-pattern>
     <servlet-name>HelloServlet</servlet-name>
   </filter-mapping>
+  
   <listener>
     <listener-class>wangjiawei.OnlineListener</listener-class>
   </listener>
+  
+  <servlet>
+    <servlet-name>AjaxServlet</servlet-name>
+    <servlet-class>wangjiawei.AjaxServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AjaxServlet</servlet-name>
+    <url-pattern>/ajax</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
